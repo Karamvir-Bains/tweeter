@@ -16,7 +16,7 @@ span {
   padding-left: 1.5em;
 }
 
-nav, div {
+nav div {
   text-align: center;
   margin: 0;
   padding-right: 1.5em;
@@ -26,6 +26,6 @@ nav, div {
   color: #ef3c1f;
 }
 
-nav, p {
+nav p {
   margin: 0;
 }
