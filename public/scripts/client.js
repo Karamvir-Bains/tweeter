@@ -6,7 +6,6 @@
  */
 
 $(document).ready(function() {
-  console.log("running");
   // Test / driver code (temporary). Eventually will get this from the server.
   // Fake data taken from initial-tweets.json
   const data = [
@@ -69,4 +68,14 @@ $(document).ready(function() {
   };
 
   renderTweets(data);
+
+  $("form").submit((event) => {
+    event.preventDefault();
+    // Converts the form text data into a string
+    const $formString = $("form").serialize();
+    // Send ajax post request
+    $.post('/tweets/', $formString, function() {
+      console.log('POST request:', $formString);
+    });
+  });
 });
