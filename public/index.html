@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/new-tweet.css">
+    <link rel="stylesheet" href="/styles/tweet.css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -37,7 +38,7 @@
       </div>
     </nav>
     <!-- Header -->
-    <header>
+    <header class="userHeader">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -59,6 +60,24 @@
     </section>
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <article class="tweet">
+        <header>
+          <div>
+            <img class="userAvatar" src="https://i.imgur.com/73hZDYK.png" alt="avatar">
+            <p class="userName">Newton</p>
+          </div>
+          <p class="userHandle">@SirIsaac</p>
+        </header>
+        <p class="userTweet">If I have seen further it is by standing on the shoulders of giants</p>
+        <footer>
+          <p>10 days ago</p>
+          <div>
+            <i class="fa-solid fa-flag fa-xs"></i>
+            <i class="fa-solid fa-retweet fa-xs"></i>
+            <i class="fa-solid fa-heart fa-xs"></i>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>
