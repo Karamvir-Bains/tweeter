@@ -16,6 +16,12 @@ $(document).ready(function() {
     }
   };
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweetData) {
     const tweetTimeStamp = timeago.format(tweetData.created_at);
     const $tweet = $(`
@@ -27,7 +33,7 @@ $(document).ready(function() {
           </div>
           <p class="userHandle">${tweetData.user.handle}</p>
         </header>
-        <p class="userTweet">${tweetData.content.text}</p>
+        <p class="userTweet">${escape(tweetData.content.text)}</p>
         <footer>
           <p>${tweetTimeStamp}</p>
           <div>
@@ -68,7 +74,7 @@ $(document).ready(function() {
     const tweetText = $formString.slice(5);
 
     // Tweet validation checks
-    if (tweetText.length > 140) return alert("Maximum length is 140 characters");
+    if (tweetText.length > 140) return alert(escape("Maximum length is 140 characters"));
     if (!tweetText) return alert("Cannot submit empty tweet");
 
     // Send ajax post request
