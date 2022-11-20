@@ -55,6 +55,13 @@ $(document).ready(function() {
     event.preventDefault();
     // Converts the form text data into a string
     const $formString = $("form").serialize();
+    // Removes text= from string
+    const tweetText = $formString.slice(5);
+
+    // Tweet validation checks
+    if (tweetText.length > 140) return alert("Maximum length is 140 characters");
+    if (!tweetText) return alert("Cannot submit empty tweet");
+
     // Send ajax post request
     $.post('/tweets/', $formString, function() {
       console.log('POST request:', $formString);
