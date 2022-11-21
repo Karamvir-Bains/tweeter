@@ -39,3 +39,12 @@
 .over-max-length {
   color: red;
 }
+
+.validation-error {
+  display: none;
+  color: red;
+  border: 3px solid red;
+  width: 90%;
+  margin: 1em auto 0 auto;
+  padding: 0.5em;
+}

@@ -73,9 +73,31 @@ $(document).ready(function() {
     // Removes text= from string
     const tweetText = $formString.slice(5);
 
+    $(".validation-error").remove();
+
+    const handleErrorHTML = function(message) {
+      const container = `
+      <div class="validation-error">
+        <i class="fas fa-exclamation-triangle"></i>
+        ${message}
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>`;
+      return container;
+    };
+
     // Tweet validation checks
-    if (tweetText.length > 140) return alert(escape("Maximum length is 140 characters"));
-    if (!tweetText) return alert("Cannot submit empty tweet");
+    if (tweetText.length > 140) {
+      const errorMessage = "Tweets can only be a maximum of 140 characters!";
+      $("#new-tweet").prepend(handleErrorHTML(errorMessage));
+      $(".validation-error").slideDown("slow");
+      return;
+    }
+    if (!tweetText) {
+      const errorMessage = "Must enter a message to send a tweet.";
+      $("#new-tweet").prepend(handleErrorHTML(errorMessage));
+      $(".validation-error").slideDown("slow");
+      return;
+    }
 
     // Send ajax post request
     $.post('/tweets/', $formString, function() {
