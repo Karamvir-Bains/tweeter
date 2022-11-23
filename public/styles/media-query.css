@@ -1,0 +1,25 @@
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  #content-container {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #content-container > div {
+    width: 80%;
+  }
+  
+  #new-tweet form {
+    margin-top: 0;
+  }
+
+  header.userHeader {
+    margin-top: 0;
+    margin-left: 2em;
+    margin-right: 2.5em;
+    height: 30%;
+    width: 30%;
+    padding-top: 35px;
+  }
+}

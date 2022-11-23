@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css">
     <link rel="stylesheet" href="/styles/tweet.css">
     <link rel="stylesheet" href="/styles/tweets-container.css">
+    <link rel="stylesheet" href="/styles/media-query.css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,29 +40,33 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <!-- Header -->
-    <header class="userHeader">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Karamvir Bains</h2>
-      </div>
-    </header>
-    <!-- Tweet Form -->
-    <section id="new-tweet">
-      <form method="post" action="/tweets">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div id="tweet-controls">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+    <div id="content-container">
+      <!-- Header -->
+      <header class="userHeader">
+        <div>
+            <img src="/images/profile-hex.png"> 
         </div>
-      </form>
-    </section>
-    <!-- Page-specific (main) content here -->
-    <main id="tweets-container">
-    </main>
+        <br>
+        <div>
+            <h2>Karamvir Bains</h2>
+        </div>
+      </header>
+      <div>
+        <!-- Tweet Form -->
+        <section id="new-tweet">
+          <form method="post" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div id="tweet-controls">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <!-- Page-specific (main) content here -->
+        <main id="tweets-container">
+        </main>
+      </div>
+    </div>
   </body>
 </html>
