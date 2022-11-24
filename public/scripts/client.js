@@ -12,7 +12,7 @@ $(document).ready(function() {
     // takes return value and appends it to the tweets container
     for (const tweetData of tweets) {
       const $tweet = createTweetElement(tweetData);
-      $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+      $('#tweets-container').prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
     }
   };
 
