@@ -100,7 +100,7 @@ $(document).ready(function() {
     }
 
     // Send ajax post request
-    $.post('/tweets/', $formString, function() {
+    $.post('/tweets', $formString, function() {
       console.log('POST request:', $formString);
       $("#tweet-text").val("");
       loadNewTweets();
