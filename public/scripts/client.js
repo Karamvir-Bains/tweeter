@@ -106,4 +106,13 @@ $(document).ready(function() {
       loadNewTweets();
     });
   });
+
+  $("#btn-new-tweet").click((event) => {
+    const newTweetVisible = $("#new-tweet").is(":visible");
+    if (newTweetVisible) {
+      $("#new-tweet").slideUp("fast");
+    } else {
+      $("#new-tweet").slideDown("fast");
+    }
+  });
 });
