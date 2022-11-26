@@ -28,7 +28,7 @@ $(document).ready(function() {
       <article class="tweet">
         <header>
           <div>
-            <img class="userAvatar" src="${tweetData.user.avatars}" alt="avatar">
+            <img class="userAvatar" src="${tweetData.user.avatars}" alt="Avatar of ${tweetData.user.name}">
             <p class="userName">${tweetData.user.name}</p>
           </div>
           <p class="userHandle">${tweetData.user.handle}</p>
@@ -50,7 +50,6 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(json) {
-        console.log('Success: ', json);
         renderTweets(json);
       });
   };
@@ -60,13 +59,12 @@ $(document).ready(function() {
   const loadNewTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(json) {
-        console.log('Success: ', json);
         const recentTweet = [json[json.length - 1]];
         renderTweets(recentTweet);
       });
   };
 
-  $("form").submit((event) => {
+  $("form").submit(function() {
     event.preventDefault();
     // Converts the form text data into a string
     const $formString = $("form").serialize();
@@ -101,20 +99,8 @@ $(document).ready(function() {
 
     // Send ajax post request
     $.post('/tweets', $formString, function() {
-      console.log('POST request:', $formString);
       $("#tweet-text").val("");
       loadNewTweets();
     });
-  });
-
-  $("#btn-new-tweet").click(function(event) {
-    console.log("running");
-    const newTweetVisible = $("#new-tweet").is(":visible");
-    if (newTweetVisible) {
-      $("#new-tweet").slideUp("fast");
-    } else {
-      $("#new-tweet").slideDown("fast");
-      $("#tweet-text").focus();
-    }
   });
 });
