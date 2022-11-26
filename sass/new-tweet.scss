@@ -1,0 +1,57 @@
+/*
+ * New Tweet Form
+ */
+@use "partial";
+
+#new-tweet {
+  display: none;
+
+  form {
+    @include partial.center-margin;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    border: none;
+    color: partial.$new-tweet-color;
+    background-color: partial.$new-tweet-button-color;
+    font-family: partial.$new-tweet-font;
+  }
+
+  textarea {
+    background: transparent;
+    resize: none;
+    outline: none;
+    border: 0px;
+    border-bottom: 3px solid partial.$new-tweet-border-color;
+  }
+
+  output {
+    font-family: partial.$new-tweet-font;
+  }
+
+  label {
+    font-family: partial.$font-stack;
+    font-weight: 600;
+  }
+
+  .over-max-length {
+    color: partial.$new-tweet-error-color;
+  }
+  
+  .validation-error {
+    display: none;
+    color: partial.$new-tweet-error-color;
+    border: 3px solid partial.$new-tweet-error-color;
+    width: 90%;
+    margin: 1em auto 1.5em auto;
+    padding: 0.5em;
+  }
+}
+
+#tweet-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+}

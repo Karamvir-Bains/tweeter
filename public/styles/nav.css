@@ -1,6 +1,10 @@
+/*
+ * Navigation Bar
+ */
 nav {
   position: fixed;
   top: 0px;
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,36 +13,32 @@ nav {
   background-color: #4056A1;
   color: #FFFFFF;
 }
-
-span {
+nav button {
+  background-color: transparent;
+  border: 0;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  padding-right: 1.5em;
+}
+nav p {
+  margin: 0;
+}
+nav span {
   font-family: "Bungee";
   font-size: 1.5em;
   padding-left: 1.5em;
 }
-
-nav button {
-  background-color: transparent;
-  border: 0;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding-right: 1.5em;
-}
-
-nav button:hover {
-  cursor: pointer;
-}
-
-.fa-angles-down {
+nav .fa-angles-down {
   color: #ef3c1f;
   animation: fa-angles-down 3s ease infinite;
 }
-
-nav p {
-  margin: 0;
-}
-
 @keyframes fa-angles-down {
-	0%, 100% {transform: translateY(0.2em);}
-	50% {transform: translateY(-0.1em);}
+  0%, 100% {
+    transform: translateY(0.2em);
+  }
+  50% {
+    transform: translateY(-0.1em);
+  }
 }

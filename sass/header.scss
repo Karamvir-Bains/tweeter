@@ -1,17 +1,16 @@
 /*
  * User Header
  */
+@use "partial";
+
 header.userHeader {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
+  @include partial.center-align-flex;
   height: 400px;
   width: 100%;
   margin-top: 120px;
   margin-bottom: 3em;
   text-align: center;
   word-break: break-all;
-  background-color: #d99821;
+  background-color: partial.$header-background-color;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }

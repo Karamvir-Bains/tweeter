@@ -1,0 +1,47 @@
+/*
+ * Navigation Bar
+ */
+@use "partial";
+
+nav {
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100vw;
+  background-color: partial.$nav-background-color;
+  color: partial.$nav-color;
+
+  button {
+    background-color: partial.$nav-button-color;
+    border: 0;
+    color: partial.$nav-color;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    padding-right: 1.5em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  span {
+    font-family: "Bungee";
+    font-size: 1.5em;
+    padding-left: 1.5em;
+  }
+
+  .fa-angles-down {
+    color: partial.$nav-angles-down-color;
+    animation: fa-angles-down 3s ease infinite;
+  }
+
+  @keyframes fa-angles-down {
+    0%, 100% {transform: translateY(0.2em);}
+    50% {transform: translateY(-0.1em);}
+  }
+}

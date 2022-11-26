@@ -1,44 +1,39 @@
+/*
+ * Tweet Container
+ */
 article.tweet {
- border: 3px solid #555149;
- margin-top: 1.5em;
- margin-bottom: 1.5em;
+  border: 3px solid #555149;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
-
 article.tweet:hover {
   box-shadow: 0.3em 0.3em #c9cae2;
 }
-
-article.tweet header {
- display: flex;
- justify-content: space-between;
- margin: 0.4em 1.7em 0 1em;
-}
-
-article.tweet header div {
+article header {
   display: flex;
-  align-items:center;
+  justify-content: space-between;
+  margin: 0.4em 1.7em 0 1em;
 }
-
-.userAvatar {
+article header div {
+  display: flex;
+  align-items: center;
+}
+article header .userAvatar {
   height: 2em;
   width: 2em;
 }
-
-.userName {
+article header .userName {
   margin-left: 10%;
 }
-
-.userHandle {
+article header .userHandle {
   color: #cacee5;
   font-weight: 600;
 }
-
-.userTweet {
+article .userTweet {
   font-weight: 600;
   margin-left: 1.7em;
 }
-
-article.tweet footer {
+article footer {
   border: 0px;
   border-top: 3px solid #555149;
   display: flex;
@@ -47,24 +42,20 @@ article.tweet footer {
   padding: 0.7em 1.1em 0.7em 1.1em;
   width: 97%;
 }
-
-article.tweet footer div {
+article footer div {
   display: flex;
-  align-items: center
+  align-items: center;
 }
-
-article.tweet footer p {
+article footer p {
   margin: 0;
   font-size: 70%;
   font-weight: 600;
   color: #555149;
 }
-
-article.tweet footer i {
+article footer i {
   color: #47569d;
   margin: 0 0.2em 0 0.2em;
 }
-
-article.tweet footer i:hover {
+article footer i:hover {
   color: #b9933c;
 }

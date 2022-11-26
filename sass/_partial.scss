@@ -1,0 +1,55 @@
+// Default Style
+$font-stack: "Source Sans Pro", sans-serif;
+$primary-color: #545149;
+$primary-background-color: #f4f1ec;
+$primary-font-size: 24px;
+
+// Header Style
+$header-background-color: #d99821;
+
+// Nav Bar Style
+$nav-color: #FFFFFF;
+$nav-background-color: #4056A1;
+$nav-button-color: transparent;
+$nav-angles-down-color: #ef3c1f;
+
+// New Tweet Style
+$new-tweet-font: "Bungee";
+$new-tweet-color: #FFFFFF;
+$new-tweet-error-color: #ff0000;
+$new-tweet-button-color: #4151a1;
+$new-tweet-border-color: #555149;
+
+// Top Button Style
+$top-button-color: #FFFFFF;
+$top-button-background-color: #ff1d0f;
+$top-button-shadow-color: #2d2d2d;
+
+// Tweet Style
+$tweet-primary-color: #555149;
+$tweet-secondary-color: #cacee5;
+$tweet-border-color: #555149;
+$tweet-shadow-color: #c9cae2;
+$tweet-icon-color: #47569d;
+$tweet-icon-hover-color: #b9933c;
+
+// Center Aligns Header
+@mixin center-align-flex {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+// Centers Main and New Tweet Form
+@mixin center-margin {
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+
+@mixin fixed-button {
+  position: fixed;
+  right: 0.4em;
+  bottom: 0.3em;
+  z-index: 99;
+}

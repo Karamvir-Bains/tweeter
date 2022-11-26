@@ -1,22 +1,21 @@
+/*
+ * New Tweet Form
+ */
 #new-tweet {
   display: none;
 }
-
 #new-tweet form {
   width: 90%;
-  margin: 3em auto 0 auto;
+  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: #f3f1ed;
 }
-
 #new-tweet button {
-	border: none;
-  color: white;
+  border: none;
+  color: #FFFFFF;
   background-color: #4151a1;
   font-family: "Bungee";
 }
-
 #new-tweet textarea {
   background: transparent;
   resize: none;
@@ -24,31 +23,27 @@
   border: 0px;
   border-bottom: 3px solid #555149;
 }
-
 #new-tweet output {
   font-family: "Bungee";
 }
-
 #new-tweet label {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
+}
+#new-tweet .over-max-length {
+  color: #ff0000;
+}
+#new-tweet .validation-error {
+  display: none;
+  color: #ff0000;
+  border: 3px solid #ff0000;
+  width: 90%;
+  margin: 1em auto 1.5em auto;
+  padding: 0.5em;
 }
 
 #tweet-controls {
   display: flex;
   justify-content: space-between;
   margin-top: 0.5em;
-}
-
-.over-max-length {
-  color: red;
-}
-
-.validation-error {
-  display: none;
-  color: red;
-  border: 3px solid red;
-  width: 90%;
-  margin: 1em auto 0 auto;
-  padding: 0.5em;
 }

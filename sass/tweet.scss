@@ -1,0 +1,75 @@
+/*
+ * Tweet Container
+ */
+@use "partial";
+
+article {
+  &.tweet {
+    border: 3px solid partial.$tweet-border-color;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    &:hover {
+      box-shadow: 0.3em 0.3em partial.$tweet-shadow-color;
+    }
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.4em 1.7em 0 1em;
+
+    div {
+      display: flex;
+      align-items:center;
+    }
+
+    .userAvatar {
+      height: 2em;
+      width: 2em;
+    }
+    
+    .userName {
+      margin-left: 10%;
+    }
+    
+    .userHandle {
+      color: partial.$tweet-secondary-color;
+      font-weight: 600;
+    }
+  }
+
+  .userTweet {
+    font-weight: 600;
+    margin-left: 1.7em;
+  }
+
+  footer {
+    border: 0px;
+    border-top: 3px solid partial.$tweet-border-color;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 0 auto;
+    padding: 0.7em 1.1em 0.7em 1.1em;
+    width: 97%;
+
+    div {
+      display: flex;
+      align-items: center
+    }
+
+    p {
+      margin: 0;
+      font-size: 70%;
+      font-weight: 600;
+      color: partial.$tweet-primary-color;
+    }
+
+    i {
+      color: partial.$tweet-icon-color;
+      margin: 0 0.2em 0 0.2em;
+      &:hover {
+        color: partial.$tweet-icon-hover-color;
+      }
+    }
+  }
+}

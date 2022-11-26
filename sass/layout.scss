@@ -3,6 +3,8 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+@use "partial";
+
 html {
   box-sizing: border-box;
 }
@@ -14,15 +16,15 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+  font-family: partial.$font-stack;
+  color: partial.$primary-color;
+  background-color: partial.$primary-background-color;
+  font-size: partial.$primary-font-size;
 }
 
 main {
-  width: 90%;
-  margin: 0 auto 0 auto;
-  background-color: #f4f1ec;
+  @include partial.center-margin;
+  background-color: partial.$primary-background-color;
 }

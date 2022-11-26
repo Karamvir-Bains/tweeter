@@ -1,0 +1,26 @@
+/*
+ * Return To Top Button
+ */
+@use "partial";
+
+.top-button {
+  @include partial.fixed-button;
+  display: none;
+  width: 3em;
+  height: 3em;
+  color: partial.$top-button-color;
+  background-color: partial.$top-button-background-color;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0em 0.05em partial.$top-button-shadow-color;
+  }
+}
+
+.displayButton {
+  display: block;
+}
