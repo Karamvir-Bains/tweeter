@@ -5,7 +5,7 @@
 /* Desktop Styles */
 @media only screen and (min-width: 1024px) {
   #content-container {
-    padding-top: 200px;
+    padding-top: 8.5em;
     display: flex;
     flex-direction: row;
     > div {
@@ -19,7 +19,7 @@
     margin-right: 2.5em;
     height: 30%;
     width: 30%;
-    padding: 35px 25px 0 25px;
+    padding: 1.4em 1em 0 1em;
     border-radius: 5%;
   }
 }
