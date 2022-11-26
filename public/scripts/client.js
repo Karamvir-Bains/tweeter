@@ -107,12 +107,14 @@ $(document).ready(function() {
     });
   });
 
-  $("#btn-new-tweet").click((event) => {
+  $("#btn-new-tweet").click(function(event) {
+    console.log("running");
     const newTweetVisible = $("#new-tweet").is(":visible");
     if (newTweetVisible) {
       $("#new-tweet").slideUp("fast");
     } else {
       $("#new-tweet").slideDown("fast");
+      $("#tweet-text").focus();
     }
   });
 });
