@@ -31,3 +31,15 @@ This repository is the starter code for the project: Students will fork and clon
 ## Dev Dependencies
 
 - Nodemon
+
+## Documentation
+
+`index.html` - HTML structure for the web page.
+
+`client.js` - Handles creating, submitting, and loading tweets.
+
+`composer-char-counter.js` - Handles the input character count, and displays relevant errors.
+
+`toggle-top-button.js` - Handles the return to the top of the page, if the button is pressed.
+
+`toggle-tweet-form.js` - Handles toggling the visibility of the tweet form.
