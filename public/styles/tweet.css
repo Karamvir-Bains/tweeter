@@ -24,6 +24,7 @@ article header .userAvatar {
 }
 article header .userName {
   margin-left: 10%;
+  white-space: nowrap;
 }
 article header .userHandle {
   color: #cacee5;

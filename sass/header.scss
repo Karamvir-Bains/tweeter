@@ -13,4 +13,10 @@ header.userHeader {
   word-break: break-all;
   background-color: partial.$header-background-color;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  img {
+    padding-top: 1em;
+  }
+  h2 {
+    margin-top: 0;
+  }
 }

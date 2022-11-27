@@ -15,3 +15,9 @@ header.userHeader {
   background-color: #d99821;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
+header.userHeader img {
+  padding-top: 1em;
+}
+header.userHeader h2 {
+  margin-top: 0;
+}
