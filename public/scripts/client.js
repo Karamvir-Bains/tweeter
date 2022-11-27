@@ -7,21 +7,23 @@
 
 $(document).ready(function() {
   const renderTweets = function(tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+    // Loops through tweets
+    // Calls createTweetElement for each tweet
+    // Takes return value and appends it to the tweets container
     for (const tweetData of tweets) {
       const $tweet = createTweetElement(tweetData);
-      $('#tweets-container').prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+      $('#tweets-container').prepend($tweet);
     }
   };
 
+  // Takes input text and returs safe text element
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // Creates a new tweet element and returns html
   const createTweetElement = function(tweetData) {
     const tweetTimeStamp = timeago.format(tweetData.created_at);
     const $tweet = $(`
@@ -47,6 +49,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // Loads all stored tweets
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(json) {
@@ -56,6 +59,7 @@ $(document).ready(function() {
 
   loadTweets();
 
+  // Loads new tweets
   const loadNewTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(json) {
@@ -73,6 +77,7 @@ $(document).ready(function() {
 
     $(".validation-error").remove();
 
+    // Creates an error container, and returns the html
     const handleErrorHTML = function(message) {
       const container = `
       <div class="validation-error">

@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
 $(document).ready(function() {
+  // Counts input characters and alerts if over the limit
   $("#tweet-text").on("input", function() {
     const maxLength = 140;
     const characterCount = $(this).val().length;
