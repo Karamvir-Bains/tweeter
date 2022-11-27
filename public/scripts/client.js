@@ -51,24 +51,36 @@ $(document).ready(function() {
 
   // Loads all stored tweets
   const loadTweets = function() {
-    $.ajax('/tweets', { method: 'GET' })
-      .then(function(json) {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      success: function(json) {
         renderTweets(json);
-      });
+      },
+      error: function(data, textStatus, errorThrown) {
+        alert(errorThrown);
+      },
+    });
   };
 
   loadTweets();
 
   // Loads new tweets
   const loadNewTweets = function() {
-    $.ajax('/tweets', { method: 'GET' })
-      .then(function(json) {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      success: function(json) {
         const recentTweet = [json[json.length - 1]];
         renderTweets(recentTweet);
-      });
+      },
+      error: function(data, textStatus, errorThrown) {
+        alert(errorThrown);
+      },
+    });
   };
 
-  $("form").submit(function() {
+  $("form").submit(function(event) {
     event.preventDefault();
     // Converts the form text data into a string
     const $formString = $("form").serialize();
