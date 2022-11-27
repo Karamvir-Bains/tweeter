@@ -8,17 +8,28 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1669318264051
+    "created_at": 1669248375701
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "name": "Steve Jobs",
+      "avatars": "https://i.imgur.com/2WZtOD6.png",
+      "handle": "@SteveJobs"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Innovation distinguishes between a leader and a follower."
     },
-    "created_at": 1669404664051
+    "created_at": 1669334775701
+  },
+  {
+    "user": {
+      "name": "Elon Musk",
+      "avatars": "https://i.imgur.com/ilT4JDe.png",
+      "handle": "@elonmusk"
+    },
+    "content": {
+      "text": "Comedy is now legal on Twitter"
+    },
+    "created_at": 1669421175701
   }
 ]
